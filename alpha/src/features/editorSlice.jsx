@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 
 const initialState = {
     theme: 1,
@@ -29,6 +28,9 @@ export const editorReducer = createSlice({
             state.currlang = action.payload
             const sellang = state.allsnips.find(lang=> lang.langSlug === state.currlang)
             state.currvalue = sellang ? sellang.code : "..."
+        },        
+        changeValue: (state, action)=>{
+            state.currvalue = action.payload
         },
         changeTheme: (state, action)=>{
             state.theme = action.payload

@@ -23,7 +23,7 @@ export default function Select() {
         <select
             value={currlang}
             onChange={(e) => onChange(e.target.value)}
-            className="p-2 w-[30%] rounded-lg outline-none  text-black"
+            className="p-2 w-[20%] rounded-lg outline-none  text-black"
             >
             {languages.map((lang) => (
             <option key={lang} value={lang.toLowerCase()}>
