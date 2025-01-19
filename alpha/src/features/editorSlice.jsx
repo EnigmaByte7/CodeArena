@@ -5,7 +5,7 @@ const langs = useSelector(state => state.ques.lang)
 
 const initialState = {
     theme: 1,
-    error: ()=> {langs.length === 0 ? 'Something Went Wrong!' : langs},
+    error: null,
     currlang: 'cpp',
     currvalue: ()=>{
         for (let i = 0; i < langs.length; i++) {
